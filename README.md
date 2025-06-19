@@ -95,7 +95,7 @@ RETURN s.student_id, s.name, s.email;``
 
 We dont have any students that never attended a session 
 # BONUS : Graph-to-SQL Conversion
-
+![ERD](images/gomycode.drawio.png)
  
 
 
