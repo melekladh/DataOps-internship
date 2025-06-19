@@ -58,6 +58,7 @@ Q1. List all sessions attended by the student named “Alice”.
 I replaced the name with David because we dont have a student named Alice 
 ``MATCH (s:Student {name: "David"})-[:ATTENDED]->(sess:Session)
 RETURN sess.session_id, sess.date, sess.module, sess.instructor;``
+![Q1](images/Q1.PNG)
 
 ● Q2. Find the top 3 students with the highest number of attended sessions.
 ``MATCH (s:Student)-[:ATTENDED]->(sess:Session)
@@ -65,7 +66,7 @@ WITH s, count(sess) AS attendance_count
 ORDER BY attendance_count DESC
 LIMIT 3
 RETURN s.student_id, s.name, attendance_count;``
-
+![Q2](images/Q2.PNG)
 ● Q3. Count how many students attended each session.
 ``
 MATCH (s:Student)-[:ATTENDED]->(sess:Session)
@@ -73,17 +74,24 @@ WITH sess.session_id AS session_id, count(s) AS student_count
 RETURN session_id, student_count
 ORDER BY student_count DESC;
 ``
+![Q3](images/Q4.PNG)
+
 ● Q4. For each module, get the number of unique students who attended at least one
 session.
+
 ``MATCH (s:Student)-[:ATTENDED]->(sess:Session)
 WITH sess.module AS module, collect(DISTINCT s.student_id) AS students
 RETURN module, size(students) AS unique_student_count
 ORDER BY unique_student_count DESC;
 ``
+![Q4](images/Q3.PNG)
+
 ● Q5. Return a list of students who have never attended any session.
 ``MATCH (s:Student)
 WHERE NOT (s)-[:ATTENDED]->(:Session)
 RETURN s.student_id, s.name, s.email;``
+
+![Q5](images/Q5.PNG)
 
 
 
