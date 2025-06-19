@@ -93,7 +93,10 @@ RETURN s.student_id, s.name, s.email;``
 
 ![Q5](images/Q5.PNG)
 
+We dont have any students that never attended a session 
+# BONUS : Graph-to-SQL Conversion
 
+ 
 
 
 
