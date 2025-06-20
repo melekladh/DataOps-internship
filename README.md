@@ -3,7 +3,14 @@
 
 The assignement aimes to: 
  Build a clean  OLAP Pipeline + Looker Dashboard and Graph Data Modeling with Neo4j
-# task 1
+ ## 🛠️ Technologies Used
+
+- **Python** – for data cleaning and transformation
+- **Google Looker Studio** – interactive dashboard and data visualization
+- **Neo4j** – graph database for modeling relationships
+- **Cypher** – Neo4j query language for graph traversal
+- **Docker** – containerizing Neo4j instance
+# Task 1
 
 
 - [ETL Task Notebook](./etl_task.ipynb)
