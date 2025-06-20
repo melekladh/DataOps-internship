@@ -3,9 +3,10 @@
 
 The assignement aimes to: 
  Build a clean  OLAP Pipeline + Looker Dashboard and Graph Data Modeling with Neo4j
-## Table of Contents
+# task 1
 
-- [ETL PIEPLINE ](#introduction)
+
+- [ETL Task Notebook](./etl_task.ipynb)
 
 ### looker studio 
 You can access the link of the looker studio via this link https://lookerstudio.google.com/reporting/b9906a2e-117b-454d-abea-2dc422f2a6a4
